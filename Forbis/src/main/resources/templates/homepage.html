@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+	<head>
+	<title>Last character occurrence counter</title>
+	</head>
+	<body>
+	<form action="" method="post">
+		Text: <textarea rows = "5" cols = "60" name = "description" th:field="${textOutcome.countedText}" /></textarea><br/>
+		<input type="submit" value="See this outcome along with previous Outcomes">
+	</form>
+	
+	<br/>
+	<br/>
+	Previous Outcomes: <div th:each="textOutcome : ${allOutcomes}" th:text="|Outcome: ${textOutcome.countedText}|">
+	</div>
+	</body>
+</html>
